@@ -7,9 +7,9 @@ const photoController = require('./controllers/photoController');
 router.use(homeController);
 // TODO: add controller routes
 router.use('/users', userController);
-router.use('/photos', photoController)
-//router.get('*', (req, res) => {
-  //  res.redirect('/404');
-//});
+router.use('/photos', photoController);
+router.get('*', (req, res) => {
+    res.redirect('/404');
+});
 
 module.exports = router;
