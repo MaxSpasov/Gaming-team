@@ -29,7 +29,7 @@ router.post('/create', async (req, res) => {
 
 router.get('/:photoId/details', async (req, res) => {
     const photoId = req.params.photoId;
-    const photo = await photoManager.getOne(photoId).populate('comments.user').lean();
+    const photo = await photoManager.getOne(photoId).lean();
     const isOwner = req.user?._id == photo.owner_id;
 
     res.render('photos/details', { photo, isOwner });
