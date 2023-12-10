@@ -23,10 +23,11 @@ const photoSchema = new mongoose.Schema({
     },
     platform: {
         type: String,
-        
+        required: [true, 'Platform is required'],
     },
     boughtBy: {
- 
+        type: mongoose.Types.ObjectId,
+        ref: 'User',
     },
     owner: {
         type: mongoose.Types.ObjectId,
