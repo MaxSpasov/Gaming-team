@@ -25,7 +25,9 @@
                  <a href="#" class="btn-buy">Buy</a>
 
                 <!-- Logged in user who has already buy this game code-->
-                <!-- <p class="buy-message">You have already bought this game</p> -->
+                {{#if isOwner}}
+                 <p class="buy-message">You have already bought this game</p>
+                 {{/if}}
             </div>
         </div>
     </section>
