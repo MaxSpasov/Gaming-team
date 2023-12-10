@@ -21,7 +21,7 @@ router.post('/create', async (req, res) => {
     try {
         await photoManager.create(photoData);
 
-        res.redirect('/photos');
+        res.redirect('/photos/index');
     } catch (err) {
         res.render('photos/create', { error: getErrorMessage(err) });
     }
