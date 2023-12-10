@@ -13,14 +13,26 @@ const photoSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Price is required'],
     },
-    genre: {
-        type: String,
-        required: [true, 'Genre is required'],
-    },
     description: {
         type: String,
         required: [true, 'Description is required'],
     },
+    genre: {
+        type: String,
+        required: [true, 'Genre is required'],
+    },
+    platform: {
+        type: String,
+        
+    },
+    boughtBy: {
+ 
+    },
+    owner: {
+        type: mongoose.Types.ObjectId,
+        ref: 'User',
+    }
+
 });
 const Photo = mongoose.model('Photo', photoSchema);
 
